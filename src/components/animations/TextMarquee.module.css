@@ -1,0 +1,45 @@
+.marquee {
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.track {
+  display: inline-flex;
+  animation: marquee-scroll var(--marquee-duration, 20s) linear infinite;
+  animation-direction: var(--marquee-direction, normal);
+  will-change: transform;
+}
+
+.marquee[data-pause-on-hover="true"]:hover .track {
+  animation-play-state: paused;
+}
+
+.content {
+  display: inline-flex;
+  align-items: center;
+  padding-right: 0;
+  flex-shrink: 0;
+}
+
+.separator {
+  display: inline-block;
+  padding: 0 0.5em;
+  opacity: 0.5;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-25%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none;
+  }
+}

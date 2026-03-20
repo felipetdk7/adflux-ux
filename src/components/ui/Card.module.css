@@ -1,0 +1,44 @@
+/* ============================================================
+   Card — Neo-Brutalist Style
+   ============================================================ */
+
+.card {
+  background-color: var(--color-surface);
+  border: var(--border-brutal);
+  padding: var(--space-6);
+  position: relative;
+  transition:
+    transform var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+}
+
+/* ———— Variants ———— */
+
+.default {
+  box-shadow: var(--shadow-brutal);
+}
+
+.elevated {
+  box-shadow: var(--shadow-brutal-lg);
+}
+
+.outlined {
+  box-shadow: none;
+}
+
+.filled {
+  background-color: var(--color-bg-warm);
+  box-shadow: var(--shadow-brutal);
+}
+
+/* ———— Hover ———— */
+
+.hoverable:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: var(--shadow-brutal-lg);
+}
+
+.hoverable:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}

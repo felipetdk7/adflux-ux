@@ -1,0 +1,125 @@
+/* ============================================================
+   Button — Neo-Brutalist Style
+   ============================================================ */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: var(--border-brutal);
+  cursor: pointer;
+  position: relative;
+  transition:
+    transform var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+  white-space: nowrap;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.button:hover {
+  transform: translate(-2px, -2px);
+}
+
+.button:active {
+  transform: translate(2px, 2px);
+  box-shadow: none !important;
+}
+
+.button:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* ———— Variants ———— */
+
+.primary {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+  box-shadow: var(--shadow-brutal);
+}
+
+.primary:hover {
+  box-shadow: var(--shadow-brutal-lg);
+}
+
+.secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-ink);
+  box-shadow: var(--shadow-brutal);
+}
+
+.secondary:hover {
+  box-shadow: var(--shadow-brutal-lg);
+}
+
+.outline {
+  background-color: transparent;
+  color: var(--color-ink);
+  box-shadow: var(--shadow-brutal);
+}
+
+.outline:hover {
+  background-color: var(--color-ink);
+  color: var(--color-bg);
+  box-shadow: var(--shadow-brutal-lg);
+}
+
+.ghost {
+  background-color: transparent;
+  color: var(--color-ink);
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.ghost:hover {
+  background-color: var(--color-bg-warm);
+  transform: none;
+}
+
+/* ———— Sizes ———— */
+
+.sm {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-xs);
+}
+
+.md {
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--text-sm);
+}
+
+.lg {
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--text-base);
+}
+
+/* ———— Modifiers ———— */
+
+.fullWidth {
+  width: 100%;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ———— Disabled ———— */
+
+.button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}

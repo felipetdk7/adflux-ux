@@ -1,0 +1,21 @@
+.container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  perspective: 600px;
+}
+
+.char {
+  display: inline-block;
+  transform-origin: center bottom;
+  will-change: transform, opacity;
+}
+
+.word {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+.line {
+  display: block;
+  will-change: transform, opacity;
+}

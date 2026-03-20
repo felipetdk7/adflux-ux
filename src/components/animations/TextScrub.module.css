@@ -1,0 +1,10 @@
+.textScrub {
+  display: inline-block;
+  perspective: 1000px;
+}
+
+.char {
+  display: inline-block;
+  will-change: color;
+  transition: color 0.1s ease-out; /* fallback */
+}
