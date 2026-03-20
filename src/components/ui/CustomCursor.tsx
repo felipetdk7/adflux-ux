@@ -35,7 +35,9 @@ export function CustomCursor() {
     const onMouseEnterLink = () => {
       gsap.to(followerRef.current, {
         scale: 2.5,
-        backgroundColor: "var(--color-primary)",
+        border: "1px solid var(--color-primary)",
+        backgroundColor: "transparent",
+        backdropFilter: "invert(1) grayscale(1)",
         mixBlendMode: "normal",
         duration: 0.3,
       });

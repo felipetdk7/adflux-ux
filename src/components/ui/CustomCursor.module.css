@@ -24,7 +24,7 @@
   z-index: 9998;
   transform: translate(-50%, -50%);
   mix-blend-mode: difference; /* Awwwards style inversion over content */
-  will-change: transform;
+  will-change: transform, backdrop-filter;
 }
 
 @media (pointer: coarse) {
