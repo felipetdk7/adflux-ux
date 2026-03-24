@@ -1,0 +1,37 @@
+fragment PageParts on Page {
+  __typename
+  title
+  blocks {
+    __typename
+    ... on PageBlocksHero {
+      heading
+      subheading
+      image
+    }
+    ... on PageBlocksText {
+      heading
+      content
+    }
+  }
+}
+
+fragment PostParts on Post {
+  __typename
+  title
+  date
+  coverImage
+  body
+}
+
+fragment GlobalParts on Global {
+  __typename
+  nav {
+    __typename
+    label
+    link
+  }
+  footer {
+    __typename
+    copyright
+  }
+}
