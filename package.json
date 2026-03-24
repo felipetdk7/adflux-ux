@@ -6,7 +6,7 @@
     "dev": "tinacms dev -c \"next dev\"",
     "build": "next build",
     "build:tina": "tinacms build",
-    "build:cf": "npx @opennextjs/cloudflare build",
+    "build:cf": "npx @opennextjs/cloudflare build && mv .open-next/worker.js .open-next/assets/_worker.js",
     "preview:cf": "npx wrangler dev",
     "deploy": "npx wrangler deploy",
     "start": "next start",
