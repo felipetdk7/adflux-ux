@@ -2,4 +2,8 @@ name = "adflux-ux"
 compatibility_date = "2024-09-23"
 compatibility_flags = ["nodejs_compat"]
 
+# Esta es la configuración correcta para Cloudflare Pages
+# El error anterior de "ASSETS" era por el NOMBRE de la unión (binding), 
+# pero la CARPETA física debe seguir siendo ".open-next/assets" porque ahí es donde OpenNext guarda la web.
 pages_build_output_dir = ".open-next/assets"
+
